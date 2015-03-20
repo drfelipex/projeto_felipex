@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lista de Clientes</title>
+</h:head>
+
+<h:body>
+
+	 <h:form>  
+	<p:panel id="painel">
+		<p:outputLabel value="nome cliente: " />
+		<p:inputText value="#{clienteController.cliente.nomeCliente}" />
+
+		<p:outputLabel value="email: " />
+		<p:inputText value="#{clienteController.cliente.emailCliente}" />
+		
+		<p:outputLabel value="telefone: " />
+		<p:inputText value="#{clienteController.cliente.telefoneCliente}" />
+		
+		<p:outputLabel value="endereco: " />
+		<p:inputText value="#{clienteController.cliente.enderecoCliente}" />
+		
+		
+		
+
+		<p:commandButton action="#{clienteController.adicionarCliente}"
+			value="OK" update="painel" type="submit" />
+
+		<p:dataTable var="cliente" value="#{clienteController.clienteList}"
+			draggableColumns="true">
+			
+			<p:column headerText="Id">
+				<h:outputText value="#{cliente.idCliente}" />
+			</p:column>
+
+			<p:column headerText="Cliente">
+				<h:outputText value="#{cliente.nomeCliente}" />
+			</p:column>
+
+			<p:column headerText="Email">
+				<h:outputText value="#{cliente.emailCliente}" />
+			</p:column>
+			
+			<p:column headerText="Telefone">
+				<h:outputText value="#{cliente.telefoneCliente}" />
+			</p:column>
+			
+			<p:column headerText="Endereco">
+				<h:outputText value="#{cliente.enderecoCliente}" />
+			</p:column>
+			
+			
+		</p:dataTable>
+	</p:panel>
+	</h:form>
+</h:body>
+
+</html>
