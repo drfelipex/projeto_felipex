@@ -1,10 +1,6 @@
 package br.com.felipex.controller;
 import br.com.felipex.model.Produto;
 import br.com.felipex.model.Pedido;
-import javax.faces.bean.ManagedBean;
-
-import javax.faces.bean.SessionScoped;
-
 
 public class PedidoController {
 	

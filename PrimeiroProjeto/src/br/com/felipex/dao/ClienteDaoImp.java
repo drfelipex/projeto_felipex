@@ -31,7 +31,7 @@ public class ClienteDaoImp implements ClienteDao {
 	public List<Cliente> list() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		List lista = session.createQuery("from Cliente").list();
+		List<Cliente> lista = session.createQuery("from Cliente").list();
 		t.commit();
 		return lista;
 	}
