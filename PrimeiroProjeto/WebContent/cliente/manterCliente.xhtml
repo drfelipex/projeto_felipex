@@ -14,10 +14,12 @@
 
 	 <h:form>  
 	 <p:growl id="messages" showDetail="true"/>
-  <!-- teste -->
+  
+  
     <p:menuButton value="Menu">
-        <p:menuitem value="Produtos" url="http://www.primefaces.org" icon="ui-icon-extlink"/>
+        <p:menuitem value="Lista de Clientes" url="localhost:8080/PrimeiroProjeto/cliente/paginaCliente.xhtml" icon="ui-icon-extlink"/>
     </p:menuButton>
+    
 	<p:panel id="painel">
 		<p:outputLabel value="nome produto: " />
 		<p:inputText value="#{produtoController.produto.nomeProduto}" />

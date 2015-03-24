@@ -13,6 +13,15 @@
 <h:body>
 
 	 <h:form>  
+	 
+	 <p:growl id="messages" showDetail="true"/>
+  
+  
+    <p:menuButton value="Menu">
+        <p:menuitem value="Lista de Produtos" url="localhost:8080/PrimeiroProjeto/cliente/manterCliente.xhtml" icon="ui-icon-extlink"/>
+    </p:menuButton>
+	 
+	 
 	<p:panel id="painel">
 		<p:outputLabel value="nome cliente: " />
 		<p:inputText value="#{clienteController.cliente.nomeCliente}" />
